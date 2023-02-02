@@ -1,0 +1,21 @@
+@import "../../App.css";
+
+.SearchBar {
+  width: 100%;
+  background-color: var(--greyInput);
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  border-radius: 2vw;
+}
+
+.SearchBar img {
+  width: 4vw;
+  margin-left: 2vw;
+}
+
+.SearchBar input {
+  color: white;
+  font-size: 4vw;
+  padding: 1vw 1vw 1vw 0;
+}

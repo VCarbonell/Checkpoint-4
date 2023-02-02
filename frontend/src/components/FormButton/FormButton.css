@@ -1,0 +1,12 @@
+@import "../../App.css";
+
+.FormButton {
+  background-color: var(--blueIcon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25vw;
+  font-weight: 600;
+  font-size: 5.5vw;
+  padding: 3vw 7vw 3vw 7vw;
+}

@@ -1,0 +1,23 @@
+@import "../../App.css";
+
+.Header {
+  position: static;
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.Header img {
+  width: 8vw;
+  border-radius: 10vw;
+  position: absolute;
+  left: 6vw;
+}
+
+.Header p {
+  font-weight: 600;
+  font-size: 5vw;
+  letter-spacing: .1vw;
+}
