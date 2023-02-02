@@ -99,6 +99,7 @@
 #message_right {
   align-self: flex-end;
   justify-content: flex-end;
+  margin-right: 2vw;
 }
 
 #message_left img {
@@ -185,4 +186,18 @@
   font-size: 4vw;
   padding: 1vw 2vw 1vw 2vw;
   border-radius: 1.75vw;
+}
+
+.OneMessage_read {
+  width: 4vw;
+  border-radius: 4vw;
+  position: absolute;
+  right: -5vw;
+}
+
+.OneMessage_unread {
+  width: 4vw;
+  border-radius: 4vw;
+  position: absolute;
+  right: -5vw;
 }

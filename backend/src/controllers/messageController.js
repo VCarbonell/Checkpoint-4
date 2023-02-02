@@ -29,7 +29,7 @@ const messageController = {
     const messageInfo = req.body;
     const { id } = req.params;
     messageModel
-      .updateOne()
+      .updateOne(messageInfo, id)
       .then((result) => {
         if (result.affectedRows !== 1) {
           return res.status(404).send(`Message ${id} not found`);
@@ -38,6 +38,16 @@ const messageController = {
           .status(200)
           .send({ message: `Message ${id} modified`, messageInfo });
       })
+      .catch((err) => next(err));
+  },
+
+  readAll: (req, res, next) => {
+    const messageInfo = req.body;
+    const { id } = req.params;
+    const { user } = req.query;
+    messageModel
+      .updateAllByConv(messageInfo, id, user)
+      .then((result) => res.send(result))
       .catch((err) => next(err));
   },
 

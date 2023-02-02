@@ -76,6 +76,12 @@ io.on("connection", (socket) => {
       io.emit("message", true);
     }
   });
+  socket.on("join", (id) => {
+    io.emit("userjoin", id);
+  });
+  socket.on("leave", (id) => {
+    io.emit("userleave", id);
+  });
 });
 
 server.listen(port, "0.0.0.0", (err) => {

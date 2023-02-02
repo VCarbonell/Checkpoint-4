@@ -4,7 +4,7 @@ const findAll = (id) => {
   return db
     .promise()
     .query(
-      `SELECT conversation.*, username, user.id as userID, photo, isConnected, lastConnexion FROM conversation
+      `SELECT conversation.*, username, user.id as userID, active_conversation, photo, isConnected, lastConnexion FROM conversation
       JOIN user  ON user.id=user_one_id AND user.id != ? OR user.id=user_two_id AND user.id != ?
       WHERE user_one_id = ? OR user_two_id = ? ;`,
       [id, id, id, id]
@@ -16,7 +16,7 @@ const findOne = (id, user) => {
   return db
     .promise()
     .query(
-      `SELECT conversation.*, username, user.id as userID, photo, isConnected, lastConnexion FROM conversation
+      `SELECT conversation.*, username, user.id as userID, active_conversation, photo, isConnected, lastConnexion FROM conversation
       JOIN user  ON user.id=user_one_id AND user.id != ? OR user.id=user_two_id AND user.id != ?
       WHERE conversation.id = ?`,
       [user, user, id]

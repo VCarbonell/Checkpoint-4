@@ -27,6 +27,17 @@ const updateOne = (messageInfo, id) => {
     .then(([res]) => res);
 };
 
+const updateAllByConv = (messageInfo, id, user) => {
+  return db
+    .promise()
+    .query("UPDATE message SET ? WHERE conversation_id = ? AND user_id = ?;", [
+      messageInfo,
+      id,
+      user,
+    ])
+    .then(([res]) => res);
+};
+
 const deleteOne = (id) => {
   return db
     .promise()
@@ -38,5 +49,6 @@ module.exports = {
   findAll,
   createOne,
   updateOne,
+  updateAllByConv,
   deleteOne,
 };

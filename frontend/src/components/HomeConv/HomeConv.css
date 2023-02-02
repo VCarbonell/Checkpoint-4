@@ -36,3 +36,8 @@
   left: 10vw;
   bottom: 0;
 }
+
+#HomeConv_bold {
+  font-weight: 400;
+  color: var(--white);
+}
