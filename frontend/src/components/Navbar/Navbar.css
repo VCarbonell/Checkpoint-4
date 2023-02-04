@@ -1,0 +1,35 @@
+@import "../../App.css";
+
+.Navbar {
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 3.25vw;
+  text-align: center;
+  align-items: center;
+  color: var(--greyIcon);
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  background-color: black;
+}
+
+.Navbar_chat, .Navbar_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Navbar img {
+  width: 7.5vw;
+}
+
+.Navbar p {
+  font-weight: 600;
+}
+
+#Navbar_blue {
+  color: var(--blueIcon);
+}
+

@@ -1,0 +1,49 @@
+@import "../../App.css";
+
+.CreateAccount {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  padding-top: 10vh;
+  gap: 5vh;
+}
+
+.CreateAccount_header {
+  display: flex;
+  align-items: center;
+}
+
+.CreateAccount_header p {
+  font-weight: 600;
+  font-size: 5.5vw;
+}
+
+.CreateAccount_header img {
+  width: 20vw;
+}
+
+.CreateAccount_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vh;
+}
+
+.CreateAccount_form input {
+  color: var(--white);
+  padding: 2vw 4vw 2vw 4vw;
+  font-size: 5vw;
+  border-radius: 1vw;
+}
+
+.CreateAccount_form_label input {
+ display: none;
+}
+
+.CreateAccount_form_label img {
+  width: 50vw;
+}

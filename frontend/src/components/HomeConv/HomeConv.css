@@ -1,0 +1,43 @@
+@import "../../App.css";
+
+.HomeConv {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  position: relative;
+}
+
+.HomeConv img {
+  width: 15vw;
+  border-radius: 17vw;
+}
+
+.HomeConv_info {
+  display: flex;
+  flex-direction: column;
+  gap: .25vh;
+}
+
+.HomeConv_info :nth-child(1) {
+  font-weight: 700;
+}
+
+.HomeConv_info :nth-child(2) {
+  color: var(--greyIcon);
+}
+
+.HomeConv_online {
+  height: 4.75vw;
+  width: 4.75vw;
+  position: absolute;
+  background-color: #45D658;
+  border-radius: 4.75vw;
+  border: .8vw solid black;
+  left: 10vw;
+  bottom: 0;
+}
+
+#HomeConv_bold {
+  font-weight: 400;
+  color: var(--white);
+}

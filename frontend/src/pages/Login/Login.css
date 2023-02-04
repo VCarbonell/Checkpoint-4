@@ -1,0 +1,46 @@
+@import "../../App.css";
+
+.Login {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  padding-top: 20vh;
+  color: var(--white);
+  font-size: 5vw;
+}
+
+.Login_logo {
+  width: 50vw;
+}
+
+.Login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2vh;
+}
+
+.Login_form_input {
+  outline: none;
+  border: none;
+  background-color: var(--greyInput);
+  color: var(--white);
+  padding: 2vw 4vw 2vw 4vw;
+  font-size: 5vw;
+  border-radius: 1vw;
+}
+
+.Login_noaccount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75vh;
+}
+
+.Login_noaccount :nth-child(2) {
+  color: var(--blueIcon);
+}
