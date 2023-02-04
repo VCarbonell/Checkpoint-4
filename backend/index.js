@@ -82,6 +82,9 @@ io.on("connection", (socket) => {
   socket.on("leave", (id) => {
     io.emit("userleave", id);
   });
+  socket.on("newConv", () => {
+    io.emit("conv", true);
+  });
 });
 
 server.listen(port, "0.0.0.0", (err) => {

@@ -26,9 +26,11 @@ function HomeConv({ conv }) {
   useEffect(() => {
     if (message.length > 0) {
       const find = message.findIndex((msg) => msg.user_id !== user.id);
-      setLastMsg(message[find].message);
-      if (message[find].isReaded === 0) {
-        setIsRead(false);
+      if (find !== -1) {
+        setLastMsg(message[find].message);
+        if (message[find].isReaded === 0) {
+          setIsRead(false);
+        }
       }
     }
   }, [message]);

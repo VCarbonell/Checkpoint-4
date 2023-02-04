@@ -24,6 +24,16 @@ const findOne = (id, user) => {
     .then(([res]) => res);
 };
 
+const findExist = (id, userID) => {
+  return db
+    .promise()
+    .query(
+      "SELECT * FROM conversation WHERE user_one_id = ? AND user_two_id = ? OR user_one_id = ? AND user_two_id = ?",
+      [id, userID, userID, id]
+    )
+    .then(([res]) => res);
+};
+
 const createOne = (users) => {
   return db
     .promise()
@@ -41,6 +51,7 @@ const deleteOne = (id) => {
 module.exports = {
   findAll,
   findOne,
+  findExist,
   createOne,
   deleteOne,
 };

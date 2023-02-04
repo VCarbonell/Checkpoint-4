@@ -18,10 +18,19 @@ const conversationController = {
       .catch((err) => next(err));
   },
 
+  getExist: (req, res, next) => {
+    const { id } = req.params;
+    const { user } = req.query;
+    convModel
+      .findExist(id, user)
+      .then((result) => res.send(result))
+      .catch((err) => next(err));
+  },
+
   postOne: (req, res, next) => {
     const convInfo = req.body;
     convModel
-      .createOne()
+      .createOne(convInfo)
       .then((result) => res.status(201).send({ id: result.insertId, convInfo }))
       .catch((err) => next(err));
   },

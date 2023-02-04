@@ -1,0 +1,33 @@
+@import "../../App.css";
+
+.OneUser {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  border-bottom: .1vw solid var(--greyInput);
+  padding-bottom: 1.5vh;
+  position: relative;
+}
+
+.OneUser img {
+  width: 10vw;
+  border-radius: 10vw;
+}
+
+.OneUser p {
+  font-weight: 500;
+  font-size: 5vw;
+}
+
+.OneUser_online {
+  height: 4.75vw;
+  width: 4.75vw;
+  position: absolute;
+  background-color: #45D658;
+  border-radius: 4.75vw;
+  border: .8vw solid black;
+  left: 6vw;
+  bottom: 2vw;
+}

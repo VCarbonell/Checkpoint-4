@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import Header from "@components/Header/Header";
 import HomeConv from "@components/HomeConv/HomeConv";
+import Navbar from "@components/Navbar/Navbar";
 import SearchBar from "@components/SearchBar/SearchBar";
 import api from "@services/api";
 import { useState, useEffect } from "react";
@@ -23,6 +24,9 @@ function Home() {
     socket.on("connexion", () => {
       getAllConv();
     });
+    socket.on("conv", () => {
+      getAllConv();
+    });
   }, [socket, allConv]);
 
   useEffect(() => {
@@ -42,6 +46,7 @@ function Home() {
             <HomeConv conv={conv} />
           ))}
       </div>
+      <Navbar isChat />
     </div>
   );
 }
